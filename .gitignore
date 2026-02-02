@@ -1,0 +1,36 @@
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Build outputs
+**/dist/
+**/build/
+**/.angular/
+
+# IDE
+**/.vscode/
+**/.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+**/.env
+**/.env.local
+
+# Symfony specific
+**/var/
+**/public/bundles/
+**/config/jwt/*.pem
+
+# Database
+**/*.db
+**/*.sqlite
