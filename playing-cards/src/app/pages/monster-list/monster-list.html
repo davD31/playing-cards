@@ -1,0 +1,22 @@
+<app-search-bar [(search)]="search"></app-search-bar>
+
+<div id="card-list">
+    @for (monster of filteredMonsters(); track monster.id; let i=$index) {
+        <app-playing-card 
+          [monster]="monster"
+          (click)="viewMonster(monster.id)"
+        />
+    } @empty {
+        <div class="center">Pas de pokémon trouvé</div>
+    }
+</div>
+
+@if (filteredMonsters().length > 0) {
+    <div class="center">Il y a {{ filteredMonsters().length }} pokémon</div>
+}
+
+<div class="centered">
+    <button (click)="addMonster()">
+        Ajouter un pokémon
+    </button>
+</div>

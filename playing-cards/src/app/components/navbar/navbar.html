@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <span>🎴 Playing Cards</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/home">
+    Accueil
+  </button>
+  @if (user()) {
+    <span>Bienvenue {{ user()?.firstName }}</span>
+    <button mat-button (click)="logout()">
+      Déconnexion
+    </button>
+  } @else {
+    <button mat-button routerLink="/login">
+      Se connecter
+    </button>
+  }
+  
+</mat-toolbar>

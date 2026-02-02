@@ -1,0 +1,45 @@
+h1 {
+  background-color: black;
+  color: white;
+}
+
+#card-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+app-playing-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;  
+}
+
+app-playing-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.centered button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.centered button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}

@@ -1,0 +1,131 @@
+<div class="container">
+    <div class="preview">
+        <app-playing-card [monster]="currentMonster"></app-playing-card>
+    </div>
+
+    <div class="main">
+        <form [formGroup]="formGroup" (submit)="submit($event)">
+            
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Nom</mat-label>
+                <input matInput formControlName="name" />
+                @if (isFieldValid('name')) {
+                    <mat-error>Ce champ est requis</mat-error>
+                }
+            </mat-form-field>
+
+            
+            <div class="form-field">
+                <button mat-raised-button type="button" (click)="imageInput.click()">
+                    <mat-icon>upload</mat-icon>
+                    {{ selectedFileName || 'Choisir une image' }}
+                </button>
+                <input 
+                    hidden 
+                    #imageInput 
+                    type="file" 
+                    (change)="onFileChange($event)" 
+                    accept="image/*"
+                />
+                @if (isFieldValid('image')) {
+                    <div class="error">Ce champ est requis</div>
+                }
+            </div>
+
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Type</mat-label>
+                <mat-select formControlName="type">
+                    @for (type of monsterTypes; track type) {
+                        <mat-option [value]="type">{{ type }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+            
+            <mat-form-field appearance="outline">
+                <mat-label>HP</mat-label>
+                <input matInput type="number" formControlName="hp">
+                @if (isFieldValid('hp')) {
+                    @if (formGroup.get('hp')?.hasError('required')) {
+                        <mat-error>Ce champ est requis</mat-error>
+                    }
+                    @if (formGroup.get('hp')?.hasError('min')) {
+                        <mat-error>Doit être > 0</mat-error>
+                    }
+                    @if (formGroup.get('hp')?.hasError('max')) {
+                        <mat-error>Doit être ≤ 200</mat-error>
+                    }
+                }
+            </mat-form-field>
+
+        
+            <mat-form-field appearance="outline">
+                <mat-label>Légende</mat-label>
+                <input matInput formControlName="figureCaption">
+                @if (isFieldValid('figureCaption')) {
+                    <mat-error>Ce champ est requis</mat-error>
+                }
+            </mat-form-field>
+
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Nom de l'attaque</mat-label>
+                <input matInput formControlName="attackName" />
+                @if (isFieldValid('attackName')) {
+                    <mat-error>Ce champ est requis</mat-error>
+                }
+            </mat-form-field>
+
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Puissance d'attaque</mat-label>
+                <input matInput type="number" formControlName="attackStrength" />
+                @if (isFieldValid('attackStrength')) {
+                    @if (formGroup.get('attackStrength')?.hasError('required')) {
+                        <mat-error>Ce champ est requis</mat-error>
+                    }
+                    @if (formGroup.get('attackStrength')?.hasError('min')) {
+                        <mat-error>Doit être > 0</mat-error>
+                    }
+                    @if (formGroup.get('attackStrength')?.hasError('max')) {
+                        <mat-error>Doit être ≤ 200</mat-error>
+                    }
+                }
+            </mat-form-field>
+
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="attackDescription" rows="2"></textarea>
+                @if (isFieldValid('attackDescription')) {
+                    <mat-error>Ce champ est requis</mat-error>
+                }
+            </mat-form-field>
+
+            
+
+            <div class="buttons-wrapper">
+                <div class="button-container left">
+                <button mat-button color="warn" type="button" (click)="deleteMonster()">
+                <mat-icon>delete</mat-icon>
+                Supprimer
+            </button>
+            </div>
+
+            <div class="button-container right">
+                <button mat-button type="button" (click)="navigateBack()">
+                <mat-icon>arrow_back</mat-icon>
+                Retour
+                </button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid">
+                <mat-icon>save</mat-icon>
+                Sauvegarder
+                </button>
+            </div>
+        </div>
+            
+        </form>
+    </div>
+</div>
