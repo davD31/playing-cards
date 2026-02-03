@@ -37,15 +37,15 @@ Application web fullstack de gestion de cartes Pokémon avec authentification JW
 
 ## 🛠️ Technologies
  Frontend
-- Angular 18
+- Angular 21
 - TypeScript 5
 - Angular Material
 - RxJS
 - Angular Router & Forms
 
  Backend
-- Symfony 7
-- PHP 8.2
+- Symfony 8
+- PHP 8.4
 - JWT Authentication (LexikJWTAuthenticationBundle)
 - Doctrine ORM
 
