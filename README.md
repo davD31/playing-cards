@@ -2,8 +2,8 @@
 
 Application web fullstack de gestion de cartes Pokémon avec authentification JWT et interface Material Design.
 
-![Angular](https://img.shields.io/badge/Angular-18-DD0031?style=flat&logo=angular)
-![Symfony](https://img.shields.io/badge/Symfony-7-000000?style=flat&logo=symfony)
+![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=flat&logo=angular)
+![Symfony](https://img.shields.io/badge/Symfony-8-000000?style=flat&logo=symfony)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)
 
 ## 📸 Aperçu
