@@ -6,7 +6,7 @@ Application web fullstack de gestion de cartes Pokémon avec authentification JW
 ![Symfony](https://img.shields.io/badge/Symfony-8-000000?style=flat&logo=symfony)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)
 
-## 📸 Aperçu
+##  Aperçu
 
 ### Page de Connexion
 <img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/d4a18177-4749-4559-a3cd-2a4900acf936" />
@@ -26,7 +26,7 @@ Application web fullstack de gestion de cartes Pokémon avec authentification JW
 
 
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
 - Authentification JWT avec tokens sécurisés
 - CRUD complet des cartes Pokémon
@@ -35,7 +35,7 @@ Application web fullstack de gestion de cartes Pokémon avec authentification JW
 - Navigation dynamique selon l'état de connexion
 - Gestion des types de Pokémon (Feu, Eau, Plante, Électrique)
 
-## 🛠️ Technologies
+##  Technologies
  Frontend
 - Angular 21
 - TypeScript 5
@@ -49,7 +49,7 @@ Application web fullstack de gestion de cartes Pokémon avec authentification JW
 - JWT Authentication (LexikJWTAuthenticationBundle)
 - Doctrine ORM
 
-## 📦 Installation
+##  Installation
 
 ### Frontend
 
@@ -62,7 +62,7 @@ Accessible sur `http://localhost:4200`
 symfony serve
 Accessible sur `http://localhost:8000`
 
-## 👤 Utilisateurs de test
+##  Utilisateurs de test
 Liste des différents utilisateurs et leur mot de passe associés :
 admin admin
 david david123
